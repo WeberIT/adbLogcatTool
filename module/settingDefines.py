@@ -33,7 +33,7 @@ def Init_DB():
             info.Table = table.Table
             info.Headers = table.Headers[1:]
             info.Values = [setting, GENERAL_SETTINGS_DEFAULT[setting][0], GENERAL_SETTINGS_DEFAULT[setting][1]]
-            info.isChar = [False, True, True, True]
+            info.isChar = [True, True, True, True]
             sql.Insert(info)
 
         for setting in RUNTIME_SETTINGS_DEFAULT.keys():
@@ -41,5 +41,5 @@ def Init_DB():
             info.Table = table.Table
             info.Headers = table.Headers[1:]
             info.Values = [setting, RUNTIME_SETTINGS_DEFAULT[setting][0], RUNTIME_SETTINGS_DEFAULT[setting][1]]
-            info.isChar = [ True, True, True]
+            info.isChar = [True, True, True]
             sql.Insert(info)

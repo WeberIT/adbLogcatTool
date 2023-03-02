@@ -112,8 +112,8 @@ class SQLManager(object):
         query = "%s WHERE %s;" % (query[:-1], info.Conditions)
         IF_Print(query)
         try:
-           self.__db.cursor().execute(query)
-           self.__db.commit()
+            self.__db.cursor().execute(query)
+            self.__db.commit()
         except:
             print("cannot do query %s" % query)
 

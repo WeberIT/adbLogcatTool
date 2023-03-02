@@ -123,7 +123,7 @@ class GeneralSettingPanel(SettingDialog):
 
     def __onSettingChanged(self):
         if self.sender() == self.__checkBox_dir:
-            self.__module.UpdateSetting(SETTING_OPEN_DIR, self.__checkBox_dir.isChecked())
+            self.__module.UpdataSettings(SETTING_OPEN_DIR, self.__checkBox_dir.isChecked())
         elif self.sender() == self.__checkBox_file:
             if self.__checkBox_file.isChecked():
                 if self.__module.GetSetting(SETTING_OPEN_FILE_EXE) is None:
