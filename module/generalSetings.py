@@ -16,8 +16,19 @@ class GeneralSettings(object):
             info.Table = settingTable.Table
             info.Columns = [settingTable.Value, settingTable.Type]
             info.Conditions = "%s=\"%s\"" % (settingTable.Name, setting)
-            result = self.__sql_manager.Select(info).fetchall()[0]
-            self.__convert_result(setting, result)
+            result = self.__sql_manager.Select(info).fetchall()
+            if len(result) > 0 :
+                self.__convert_result(setting, result[0])
+            else:
+                self.Reset()
+                for setting in GENERAL_SETTINGS_DEFAULT.keys():
+                    info = SQLManager.InsertInfo()
+                    info.Table = settingTable.Table
+                    info.Headers = settingTable.Headers[1:]
+                    info.Values = [setting, GENERAL_SETTINGS_DEFAULT[setting][0], GENERAL_SETTINGS_DEFAULT[setting][1]]
+                    info.isChar = [True, True, True, True]
+                    self.__sql_manager.Insert(info)
+
         IF_Print("General Settings: %s " % self.__settings)
         return self.__settings
 
