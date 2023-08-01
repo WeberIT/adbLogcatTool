@@ -52,8 +52,8 @@ class SettingDialog(NoWindowDialog):
     # setupUi
 
     def retranslateUi(self):
-        self._pushButton_reset.setText(QCoreApplication.translate("SetingDialog", u"重置", None))
-        self._pushButton_cancel.setText(QCoreApplication.translate("SetingDialog", u"取消", None))
+        self._pushButton_reset.setText(QCoreApplication.translate("SetingDialog", u"reset", None))
+        self._pushButton_cancel.setText(QCoreApplication.translate("SetingDialog", u"Cancel", None))
 
     # retranslateUi
 
