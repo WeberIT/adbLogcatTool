@@ -45,14 +45,14 @@
           <item>
            <widget class="QPushButton" name="pushButton_group_reset">
             <property name="text">
-             <string>重置</string>
+             <string>Group Reset</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_group_select_all">
             <property name="text">
-             <string>全选</string>
+             <string>Group Select All</string>
             </property>
            </widget>
           </item>
@@ -77,14 +77,14 @@
           <item>
            <widget class="QPushButton" name="pushButton_mask_reset">
             <property name="text">
-             <string>重置</string>
+             <string>Mask Reset</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_mask_select_all">
             <property name="text">
-             <string>全选</string>
+             <string>Mask Select All</string>
             </property>
            </widget>
           </item>
@@ -110,14 +110,14 @@
              <set>Qt::AlignCenter</set>
             </property>
             <property name="placeholderText">
-             <string>请输入完整mask</string>
+             <string>Please enter Complete mask</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_mask_search">
             <property name="text">
-             <string>搜索</string>
+             <string>Search</string>
             </property>
            </widget>
           </item>
@@ -178,7 +178,7 @@
     <item>
      <widget class="QLabel" name="label_preview">
       <property name="text">
-       <string>预览</string>
+       <string>Preview</string>
       </property>
      </widget>
     </item>
@@ -203,14 +203,14 @@
       <item>
        <widget class="QPushButton" name="pushButton_6">
         <property name="text">
-         <string>读取设备预设</string>
+         <string>Read Device PreSettings</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_clear">
         <property name="text">
-         <string>清除设备预设</string>
+         <string>Delete Device PreSettings</string>
         </property>
        </widget>
       </item>
@@ -230,7 +230,7 @@
       <item>
        <widget class="QPushButton" name="pushButton_apply">
         <property name="text">
-         <string>应用</string>
+         <string>Apply</string>
         </property>
        </widget>
       </item>
