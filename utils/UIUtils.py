@@ -17,7 +17,7 @@ def ShowMessageDialog(msgType, msg):
     elif msgType == MESSAGE_TYPE_WARNING:
         messageBox = QMessageBox(QMessageBox.Warning, "warn", msg)
         messageBox.setWindowIcon(QIcon('icon/icon.ico'))
-        messageBox.addButton(u"关闭", QMessageBox.YesRole)
+        messageBox.addButton(u"closure", QMessageBox.YesRole)
         messageBox.exec_()
 
 def FillupListView(parent, listView, data):
