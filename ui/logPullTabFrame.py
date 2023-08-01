@@ -214,7 +214,7 @@ class LogPullTabFrame(TabFrame):
     def __showDirPicker(self, type):
         lastPath = self._module.GetLastSelectedDir(type)
         dir = QFileDialog.getExistingDirectory(self,
-                                               "请选择目录",
+                                               "Please select a directory",
                                                lastPath)
         if not dir == "":
             self._module.UpdateLastSelectedDir(dir, type)
