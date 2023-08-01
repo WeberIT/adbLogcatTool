@@ -5,9 +5,9 @@ from ui.settingDialog import SettingDialog
 from utils.UIUtils import *
 
 PLACE_HOLDER_TEXT = \
-"""请将log等级的定义粘贴至此进行解析。定义的位置可能位于camxdefs.h
+"""Please paste the definition of the log level here for analysis. The location of the definition may be located in camxdefs.h
 
-示例:
+example:
 
 static const CamxLogGroup CamxLogGroupAFD           = (static_cast<UINT64>(1) << 0);    ///< AFD
 static const CamxLogGroup CamxLogGroupSensor        = (static_cast<UINT64>(1) << 1);    ///< Sensor
@@ -37,9 +37,9 @@ class LogLevelParsePanel(SettingDialog):
 
     def retranslateUi(self):
         super().retranslateUi()
-        self.setWindowTitle(QCoreApplication.translate("SetingDialog", u"log等级解析", None))
+        self.setWindowTitle(QCoreApplication.translate("SetingDialog", u"log level analysis", None))
         self.__plainTextEdit_parser.setPlaceholderText(QCoreApplication.translate("SetingDialog", PLACE_HOLDER_TEXT, None))
-        self._pushButton_apply.setText(QCoreApplication.translate("SetingDialog", u"解析", None))
+        self._pushButton_apply.setText(QCoreApplication.translate("SetingDialog", u"analyze", None))
 
     def _reset(self):
         self.__plainTextEdit_parser.clear()
