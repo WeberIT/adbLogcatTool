@@ -221,7 +221,7 @@ class MainWindow(QMainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", TITLE_PREFIX, None))
         self.action_general_settings.setText(QCoreApplication.translate("MainWindow", u"\u901a\u7528\u8bbe\u7f6e", None))
         self.action_log_level_settings.setText(QCoreApplication.translate("MainWindow", u"\u89e3\u6790log\u7b49\u7ea7\u8bbe\u7f6e", None))
-        self.action_check_update.setText(QCoreApplication.translate("MainWindow", u"检查更新", None))
+        self.action_check_update.setText(QCoreApplication.translate("MainWindow", u"Check for updates", None))
         self.action_refresh_device_list.setText(QCoreApplication.translate("MainWindow", u"\u5237\u65b0\u8bbe\u5907\u5217\u8868", None))
         self.label_device.setText(QCoreApplication.translate("MainWindow", u"\u8bbe\u5907\u5217\u8868", None))
         self.pushButton_root.setText(QCoreApplication.translate("MainWindow", u"remount", None))
@@ -303,4 +303,4 @@ class MainWindow(QMainWindow):
         if hasNewVersion:
             self.__autoUpdateDialog.show(latestVersion)
         self.__isChecking = False
-        self.__latestVersion.setText("最新版本:%s" % latestVersion)
+        self.__latestVersion.setText("Latest version: %s" % latestVersion)
