@@ -8,7 +8,7 @@ from ui.tabFrame import TabFrame
 from utils.Utils import *
 from utils.UIUtils import *
 
-CURRENT_GROUP_PREFIX = u"当前选择的Group:"
+CURRENT_GROUP_PREFIX = u"Currently selected Group:"
 
 class LogLevelTabFrame(TabFrame, LogLevelParserListener, LogMaskSelectionListener):
 
@@ -184,7 +184,7 @@ class LogLevelTabFrame(TabFrame, LogLevelParserListener, LogMaskSelectionListene
     def _retranslateUi(self):
         self.label_group.setText(QCoreApplication.translate("TabFrame", u"Group:", None))
         self.label_current_group.setText(QCoreApplication.translate("TabFrame", CURRENT_GROUP_PREFIX, None))
-        self.label_preview.setText(QCoreApplication.translate("TabFrame", u"预览:", None))
+        self.label_preview.setText(QCoreApplication.translate("TabFrame", u"Preview:", None))
         self.pushButton_group_reset.setText(QCoreApplication.translate("TabFrame", u"\u91cd\u7f6e", None))
         self.pushButton_group_select_all.setText(QCoreApplication.translate("TabFrame", u"\u5168\u9009", None))
         self.label_mask.setText(QCoreApplication.translate("TabFrame", u"Mask:", None))
@@ -198,7 +198,7 @@ class LogLevelTabFrame(TabFrame, LogLevelParserListener, LogMaskSelectionListene
         self.pushButton_clear.setText(
             QCoreApplication.translate("TabFrame", u"\u6e05\u9664\u8bbe\u5907\u9884\u8bbe", None))
         self.pushButton_reset.setText(
-            QCoreApplication.translate("TabFrame", u"恢复默认值", None))
+            QCoreApplication.translate("TabFrame", u"Restore Defaults", None))
         self.pushButton_apply.setText(QCoreApplication.translate("TabFrame", u"\u5e94\u7528", None))
 
     # retranslateUi
