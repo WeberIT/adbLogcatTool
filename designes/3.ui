@@ -46,7 +46,7 @@
       <item>
        <widget class="QRadioButton" name="radioButton_pull">
         <property name="text">
-         <string>从设备拉取并合并</string>
+         <string>Pull from Device and merge</string>
         </property>
         <property name="checked">
          <bool>true</bool>
@@ -56,7 +56,7 @@
       <item>
        <widget class="QRadioButton" name="radioButton_merge">
         <property name="text">
-         <string>合并本地log</string>
+         <string>Local Log Merge</string>
         </property>
        </widget>
       </item>
@@ -86,7 +86,7 @@
          </font>
         </property>
         <property name="text">
-         <string>将拉取的log保存到指定目录</string>
+         <string>Save log to given Path</string>
         </property>
        </widget>
       </item>
@@ -106,7 +106,7 @@
          </font>
         </property>
         <property name="text">
-         <string>若不指定，将保存在loig合并后输出的目录</string>
+         <string>If not used it will be saved in the Output Path after log merged complete</string>
         </property>
        </widget>
       </item>
@@ -120,14 +120,14 @@
          <set>Qt::AlignCenter</set>
         </property>
         <property name="placeholderText">
-         <string>选择/输入/拖入 adb拉取保存目录</string>
+         <string>Select/enter/drag into adb to pull the save directory</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_save_pull">
         <property name="text">
-         <string>选择目录</string>
+         <string>select directory</string>
         </property>
        </widget>
       </item>
@@ -141,14 +141,14 @@
          <set>Qt::AlignCenter</set>
         </property>
         <property name="placeholderText">
-         <string>选择/输入/拖入 本地log路径</string>
+         <string>Select/input/drag into the local log path src</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_src">
         <property name="text">
-         <string>选择目录</string>
+         <string>select directory src</string>
         </property>
        </widget>
       </item>
@@ -162,14 +162,14 @@
          <set>Qt::AlignCenter</set>
         </property>
         <property name="placeholderText">
-         <string>选择/输入/拖入 合并log保存路径</string>
+         <string>Select/input/drag in Merge log save path dst</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_dst">
         <property name="text">
-         <string>选择目录</string>
+         <string>select directory dst</string>
         </property>
        </widget>
       </item>
@@ -193,7 +193,7 @@
       <item>
        <widget class="QPushButton" name="pushButton_run">
         <property name="text">
-         <string>拉取并合并</string>
+         <string>pull and merge run</string>
         </property>
        </widget>
       </item>
