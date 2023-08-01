@@ -84,16 +84,16 @@ class GeneralSettingPanel(SettingDialog):
         super().setupUi()
 
     def retranslateUi(self):
-        self.setWindowTitle(QCoreApplication.translate("SettingDialog", u"通用设置", None))
+        self.setWindowTitle(QCoreApplication.translate("SettingDialog", u"Settings", None))
         self.__checkBox_dir.setText(QCoreApplication.translate("SettingDialog", u"\u5408\u5e76log\u540e\u6253\u5f00log\u6240\u5728\u76ee\u5f55", None))
         self.__checkBox_file.setText(QCoreApplication.translate("SettingDialog", u"\u5408\u5e76\u540e\u6253\u5f00log\u6587\u4ef6", None))
         self.__label_file_info.setText(QCoreApplication.translate("SettingDialog",u"\u76ee\u524d\u53ea\u652f\u6301\u4f7f\u7528notepadd++\u6216TextAnalysisTool.NET\u6253\u5f00",None))
         self.__label_file_exe.setText(QCoreApplication.translate("SettingDialog",u"",None))
-        self._pushButton_apply.setText(QCoreApplication.translate("SetingDialog", u"应用", None))
-        self.__pushButton_choose_exe.setText(QCoreApplication.translate("SetingDialog", u"更换应用程序", None))
+        self._pushButton_apply.setText(QCoreApplication.translate("SetingDialog", u"Application", None))
+        self.__pushButton_choose_exe.setText(QCoreApplication.translate("SetingDialog", u"Replace Application", None))
 
         super().retranslateUi()
-        self._pushButton_reset.setText(QCoreApplication.translate("SetingDialog", u"恢复默认", None))
+        self._pushButton_reset.setText(QCoreApplication.translate("SetingDialog", u"reset", None))
 
     def show(self):
         super(GeneralSettingPanel, self).show()
@@ -133,18 +133,18 @@ class GeneralSettingPanel(SettingDialog):
                     else:
                         self.__module.UpdataSettings(SETTING_OPEN_FILE_EXE, fileName)
             self.__showFileExeLayout(self.__checkBox_file.isChecked())
-            self.__label_file_exe.setText("已选择使用%s打开合并后的log文件。" % self.__module.GetSetting(SETTING_OPEN_FILE_EXE) if self.__checkBox_file.isChecked() else "")
+            self.__label_file_exe.setText("Selected to use %s to open the merged log file." % self.__module.GetSetting(SETTING_OPEN_FILE_EXE) if self.__checkBox_file.isChecked() else "")
             self.__module.UpdataSettings(SETTING_OPEN_FILE, self.__checkBox_file.isChecked())
 
     def __onChangeFileExe(self):
         fileName = self.__setFileOpenExe()
         if not fileName == "":
-            self.__label_file_exe.setText("已选择使用%s打开合并后的log文件。" % fileName if self.__checkBox_file.isChecked() else "")
+            self.__label_file_exe.setText("Selected to use %s to open the merged log file." % fileName if self.__checkBox_file.isChecked() else "")
             self.__module.UpdataSettings(SETTING_OPEN_FILE_EXE, fileName)
 
     def __setFileOpenExe(self):
         fileName, fileType = QFileDialog.getOpenFileName(self,
-                                                         "请选择NotePad++或者TextAnalysisTool的可执行文件",
+                                                         "Please select the executable file of NotePad++ or TextAnalysisTool",
                                                          GetHome(),
                                                          "notepad++ (notepad++.exe);;TextAnalysisTool (TextAnalysisTool.NET.exe)")
         return fileName
@@ -157,4 +157,4 @@ class GeneralSettingPanel(SettingDialog):
         self.__checkBox_file.setChecked(settings[SETTING_OPEN_FILE])
         self.__checkBox_dir.setChecked(settings[SETTING_OPEN_DIR])
         self.__showFileExeLayout(self.__checkBox_file.isChecked())
-        self.__label_file_exe.setText("已选择使用%s打开合并后的log文件。" % self.__module.GetSetting(SETTING_OPEN_FILE_EXE) if self.__checkBox_file.isChecked() else "")
+        self.__label_file_exe.setText("Selected to use %s to open the merged log file." % self.__module.GetSetting(SETTING_OPEN_FILE_EXE) if self.__checkBox_file.isChecked() else "")
